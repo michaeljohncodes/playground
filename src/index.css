@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  margin:0;
+}
+
+body {
+  height: 100vh;
+}
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact form {
+  background-color: rgb(70, 82, 82);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 20px black;
+  padding: 30px 20px;
+  margin: 50px 0px;
+}
+.contact form input{
+  padding:0px;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  width:250px;
+}
+.contact form input:focus{
+  outline: 0;
+}
+.contact form textarea{
+  padding:0px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  width:250px;
+  height: 200px;
+}
+.contact form textarea:focus{
+  outline: 0;
+}
+.contact form fieldset{
+  padding: 0px 5px 2px;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+}
+.contact form fieldset:focus-within{
+  border-color:white;
+}
+.contact form legend{
+  padding-inline: 10px;
+  font-size:smaller;
+}
+.contact form button{
+  color:rgb(70, 82, 82);
+  background-color: rgb(193, 202, 202);
+  border: 2px solid white;
+  border-radius: 10px;
+  width: fit-content;
+  padding:5px 15px;
+  align-self: center;
+  margin-top : 10px ;
+  font-size: small;
+}
