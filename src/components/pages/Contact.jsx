@@ -24,13 +24,12 @@ const Contact = () => {
 
   return (
     <div>
-      <h1 className=" text-center font-medium ">This is the Contact Page</h1>
       <div className=" contact">
         <form onSubmit={submitData}>
-          <h1 className=" text-center text-white font-bold ">CONTACT FORM</h1>
+          <h1 className=" text-center text-white font-medium ">CONTACT FORM</h1>
           <fieldset>
             <legend className=" flex gap-[10px] items-center">
-              <FaRegUser /> Full Name{" "}
+              <FaRegUser className=" size-4" /> Full Name{" "}
             </legend>
             <input
               type="text"
@@ -44,7 +43,7 @@ const Contact = () => {
           <fieldset>
             <legend className=" flex gap-[10px] items-center">
               {" "}
-              <MdOutlineMail />
+              <MdOutlineMail className=" size-5" />
               Email{" "}
             </legend>
             <input
@@ -58,7 +57,7 @@ const Contact = () => {
           </fieldset>
           <fieldset>
             <legend className=" flex gap-[10px] items-center">
-              <BsCalendar2Date />
+              <BsCalendar2Date className=" size-4" />
               Age{" "}
             </legend>
             <input
@@ -72,7 +71,7 @@ const Contact = () => {
           </fieldset>
           <fieldset>
             <textarea
-              placeholder="Enter your bio"
+              placeholder="Enter your Bio Here"
               value={bio}
               onChange={(e) => {
                 setBio(e.target.value);
@@ -83,17 +82,20 @@ const Contact = () => {
         </form>
       </div>
 
-      <main className=" flex flex-wrap gap-5">
+      <main className=" flex flex-wrap gap-5 bg-gray-300 px-[100px] ">
         {users.map((data, i) => (
-          <div className="bg-amber-100 px-[20px] font-light" key={i}>
+          <div className=" flex flex-col bg-black px-[20px] py-[20px] font-light text-white" key={i}>
             <h1>
-              <b>Name: {data.fullName} </b>
+              <b>Name:</b> {data.fullName}
             </h1>
             <i>
-              <b>Email: {data.email} </b>
+              <b>Email: </b> {data.email}
+            </i>
+            <i>
+              <b>Age: </b> {data.age}
             </i>
             <p>
-              <b>Bio: {data.bio}</b>
+              <b>Bio:</b> {data.bio}
             </p>
           </div>
         ))}
